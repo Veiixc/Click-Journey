@@ -9,6 +9,14 @@ body {
     background-color: white;
 }
 
+.formulaire {
+    display: none;
+}
+
+.formulaire.actif {
+    display: block;
+}
+
 label {
     display: block;
     margin: 10px 5px;
