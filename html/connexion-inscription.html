@@ -4,13 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css&scss/page-acceuil.css">
-    <title>Acceuil</title>
-    <!-- <link rel="icon" type="img/png" href="../img/logo-site-removebg-preview.png"> -->
+    <link rel="stylesheet" type="text/css" href="../css&scss/connexion-inscription.css">
+    <title>Connexion/inscription</title>
+    <link rel="icon" type="img/png" href="../img/logo-site-removebg-preview.png">
 
 </head>
 
 <body>
+    <div class="conteneur">
+        <div id="formulaire-connexion" class="formulaire">
+            <h2>Connexion</h2>
+            <form>
+                <label for="email-connexion">Email</label>
+                <input type="email" id="email-connexion" required>
+                <label for="motdepasse-connexion">Mot de passe</label>
+                <input type="password" id="motdepasse-connexion" required>
+                <button type="submit">Se connecter</button>
+                <div class="connexion-google">
+                    <button>Se connecter avec Google</button>
+                </div>
+            </form>
+            <p>Pas de compte ? <a href="page.html">S'inscrire</a></p>
+        </div>
+        <div id="formulaire-inscription" class="formulaire">
+            <h2>Créer un compte</h2>
+            <form>
+                <label for="email-inscription">Email</label>
+                <input type="email" id="email-inscription" required>
+                <label for="motdepasse-inscription">Mot de passe</label>
+                <input type="password" id="motdepasse-inscription" required>
+                <button type="submit">Créer un compte</button>
+                <div class="connexion-google">
+                    <button type="button">S'inscrire avec Google</button>
+                </div>
+            </form>
+            <p>Déjà un compte ? <a href="#" id="montrer-connexion">Se connecter</a></p>
+        </div>
+    </div>
 </body>
 
 </html>
