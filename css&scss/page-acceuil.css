@@ -6,7 +6,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     min-width: 100vw;
-    /* overflow-x: hidden; */
+    background-color: black;
 }
 
 * {
@@ -16,12 +16,15 @@ body {
 }
 
 header {
+    position: fixed;
     min-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* background-color: white; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
 }
 
 .logo {
@@ -32,14 +35,14 @@ header {
 .logo div {
     width: 40px;
     height: 40px;
-    background-color: #007BFF;
+    background-color: yellow;
     color: white;
     font-size: 24px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 15px;
     margin-right: 10px;
 }
 
@@ -57,23 +60,50 @@ header {
 .header-links button {
     padding: 10px 20px;
     border: none;
-    background-color: #007BFF;
+    background-color: yellow;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
+
 .header-links button:hover {
     background-color: #0056b3;
 }
 
+header a {
+    font-size: 4ch;
+}
+
 main {
+    position: relative;
     text-align: center;
-    flex-grow: 1;
+    padding: 20px;
+    margin: auto;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 15px;
+}
+
+a {
+    font-size: 3em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px yellow;
+    text-shadow: 0 0 0 #fff;
+    transition: all 250ms;
+}
+
+a:hover {
+    text-shadow: 4px 4px 0 #fff;
+    transform: translate(-2px, -2px)
 }
 
 .title {
@@ -93,23 +123,8 @@ main {
     gap: 15px;
 }
 
-.buttons button {
-    padding: 10px 20px;
-    border: 1px solid #007BFF;
-    color: #007BFF;
-    background: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.buttons button a {
-    text-decoration: none;
-}
 
-.buttons button:hover {
-    background-color: #007BFF;
-    color: white;
-}
 
 footer {
     display: flex;
@@ -121,6 +136,7 @@ footer a img {
     width: 40px;
     height: 40px;
     object-fit: cover;
+    border-radius: 15px;
 }
 
 footer a img:hover {
@@ -183,4 +199,32 @@ footer a img:hover {
     100% {
         transform: translateX(-400%);
     }
+}
+
+.diaporama-fond {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.diaporama-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slider-1 12s infinite linear;
+}
+
+.diapositive {
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.diapositive img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
