@@ -9,9 +9,6 @@ body {
     background-color: white;
 }
 
-.formulaire {
-    display: none;
-}
 
 .formulaire.actif {
     display: block;
