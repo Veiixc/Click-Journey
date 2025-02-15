@@ -1,30 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: white;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f2f2f2;
+}
+
+
 header {
-    position: fixed;
+    position: sticky;
     min-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .acceuil {
@@ -32,12 +31,13 @@ header {
     box-shadow: none;
 }
 
-.logo {
+.logo-conteneur {
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
-.logo div {
+.logo {
     width: 40px;
     height: 40px;
     background-color: yellow;
@@ -47,11 +47,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 
-.logo div img {
+.logo img {
     width: 100%;
     height: 50px;
     object-fit: cover;
@@ -62,23 +62,27 @@ header {
     gap: 15px;
 }
 
-.header-links button {
-    padding: 10px 20px;
+.header-links a button {
+    width: 100%;
+    padding: 15px 20px;
     border: none;
-    background-color: yellow;
+    background-color: rgb(158, 158, 84);
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
+button {
+    transition: background-color 0.4s ease, transform 0.4s ease;
 
-.header-links button:hover {
-    background-color: #0056b3;
 }
 
-header a {
-    font-size: 4ch;
+button:hover {
+    transform: translateY(-5px);
 }
+
+
+
 
 main {
     position: relative;
@@ -90,12 +94,18 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(255, 255, 255, 0.8); */
     border-radius: 15px;
 }
 
-.effet-titre {
+.police-2em {
+    font-size: 1.5em;
+}
+
+.police-3em {
     font-size: 3em;
+}
+
+.effet-titre {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
@@ -106,7 +116,7 @@ main {
     transition: all 250ms;
 }
 
-:hover {
+.effet-titre:hover {
     text-shadow: 4px 4px 0 #fff;
     transform: translate(-2px, -2px)
 }
@@ -143,37 +153,6 @@ footer a img {
 
 footer a img:hover {
     transform: scale(1.1);
-}
-
-.carrousel-conteneur {
-    min-width: 100%;
-    border: 1px solid black;
-    margin: 50px auto;
-    margin-bottom: 0px;
-    overflow: hidden;
-}
-
-.carrousel-conteneur .carrousel {
-    display: flex;
-    animation: slider-1 12s infinite ease-in-out;
-    width: 100%;
-}
-
-.carrousel-conteneur p {
-    background-color: #007BFF;
-    flex-shrink: 0;
-    padding: 12% 0;
-    width: 100%;
-    text-align: center;
-    font-size: 45px;
-    color: white;
-}
-
-.carrousel-conteneur img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 @keyframes slider-1 {
@@ -232,8 +211,13 @@ footer a img:hover {
 }
 
 
-.formulaire.actif {
-    display: block;
+.formulaire {
+    background-color: white;
+    width: 50%;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 label {
@@ -243,13 +227,13 @@ label {
 }
 
 .conteneur {
-    width: 400px;
-    background-color: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 }
-
 
 input {
     width: 100%;
@@ -259,7 +243,7 @@ input {
     border-radius: 4px;
 }
 
-button {
+.formulaire button {
     padding: 10px;
     border: none;
     background-color: #007bff;
@@ -268,14 +252,17 @@ button {
     cursor: pointer;
 }
 
-.connexion-google button {
+.form-bouton .connexion-google {
     background-color: brown;
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #007bff;
+.form-bouton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 p {
     text-align: center;
@@ -291,4 +278,8 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+
+.genre {
+    display: flex;
 }

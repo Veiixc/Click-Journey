@@ -4,36 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css&scss/page-acceuil.css">
-    <title>Connexion/Inscription</title>
-    <link rel="icon" type="image/png" href="../img/logo-site-removebg-preview.png">
+    <link rel="stylesheet" type="text/css" href="../css/page-acceuil.css">
+    <title>Inscription</title>
+    <link rel="icon" type="img/png" href="../img/logo-site.png">
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <div><img src="../img/logo.png"></div>
+        <div class="logo-conteneur">
+            <a href="page-acceuil.html" class="logo"><img src="../img/logo.png"></a>
             <span id="test">Time Traveler</span>
         </div>
         <div class="header-links">
-            <button>Recherche de voyage</button>
-            <a href="connexion-inscription.html" class="effet-titre">Se connecter / S'inscrire</a>
+            <!-- <button>Recherche de voyage</button> -->
+            <a href="présentation.html"><button>Présentation</button></a>
+            <a href="profil.html"><button>Profil</button></a>
+            <a href="connexion.html"><button>Se connecter / S'inscrire</button></a>
         </div>
     </header>
     <div class="conteneur">
-        <div id="formulaire-inscription" class="formulaire">
-            <h2>Créer un compte</h2>
-            <form>
-                <label for="email-inscription">Email</label>
-                <input type="email" id="email-inscription" required>
-                <label for="motdepasse-inscription">Mot de passe</label>
-                <input type="password" id="motdepasse-inscription" required>
-                <button type="submit">Créer un compte</button>
-                <div class="connexion-google">
-                    <button type="button">S'inscrire avec Google</button>
+        <div id="formulaire-connexion" class="formulaire">
+            <h2>Inscription</h2>
+            <form method="post">
+                <label for="nom"><strong>Nom :</strong></label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom..." required>
+                <label for="prenom"><strong>Prénom :</strong></label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom..." required>
+                <label for="naissance"><strong>Date de naissance :</strong></label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+                <label for="options"><strong>Genre :</strong></label>
+                <div class="genre">
+                    <input type="radio" name="options" value="homme" required>Homme
+                    <input type="radio" name="options" value="femme" required>Femme
+                    <input type="radio" name="options" value="autre" required>Autre
+                </div>
+                <label for="email-connexion"><strong>Adresse Mail</strong></label>
+                <input type="email" id="email-connexion" name="Adresse" placeholder="Tapper votre adresse Mail..."
+                    required>
+                <label for="motdepasse-connexion"><strong>Mot de passe</strong></label>
+                <input type="password" id="motdepasse-connexion" name="mdp" placeholder="Creer votre mot de passe..."
+                    required>
+                <div class="form-bouton">
+                    <button type="submit">S'inscrire</button>
+                    <button class="connexion-google" type="button">Se connecter avec Google</button>
                 </div>
             </form>
-            <p>Déjà un compte ? <a class="connexion" href=" connexion.html" id="montrer-connexion">Se connecter</a></p>
+            <p>Déjà un compte ? <a class="Connexion" href="connexion.html" id="montrer-connexion">Se connecter</a></p>
         </div>
     </div>
     <script src="../js/script.js"></script>
