@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <title>Inscription</title>
+    <title>Recherche</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
 </head>
 
@@ -24,6 +24,44 @@
             <a href="connexion.html"><button>Se connecter / S'inscrire</button></a>
         </div>
     </header>
+    <main>
+        <section class="filtres-container">
+            <h2>Filtrer votre recherche</h2>
+            <form class="formulaire-filtre">
+                <label for="transport">Moyen de transport :</label>
+                <select id="transport">
+                    <option value="">Tous</option>
+                    <option value="avion">Avion</option>
+                    <option value="bateau">Bateau</option>
+                    <option value="voiture">Voiture</option>
+                    <option value="train">Train</option>
+                </select>
+
+                <label for="prix">Tranche de prix :</label>
+                <select id="prix">
+                    <option value="">Tous</option>
+                    <option value="0-500">0 - 500€</option>
+                    <option value="500-1000">500 - 1000€</option>
+                    <option value="1000-2000">1000 - 2000€</option>
+                    <option value="2000+">2000€ et plus</option>
+                </select>
+
+                <label for="duree">Durée du séjour :</label>
+                <select id="duree">
+                    <option value="">Toutes</option>
+                    <option value="weekend">Week-end</option>
+                    <option value="semaine">1 semaine</option>
+                    <option value="quinzaine">2 semaines</option>
+                    <option value="mois">1 mois</option>
+                </select>
+
+                <label for="destination">Destination :</label>
+                <input type="text" id="destination" placeholder="Ex: Paris, New York...">
+
+                <button type="submit">Rechercher</button>
+            </form>
+        </section>
+    </main>
     <script src="../js/script.js"></script>
 </body>
 

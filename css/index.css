@@ -229,6 +229,7 @@ label {
     width: 100%;
     background-color: transparent;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
@@ -522,7 +523,11 @@ tr:hover {
 
 /* Présentation */
 .circuits-conteneur {
+    display: flex;
+    justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 50px 20px;
     background-color: #f2f2f2;
 }
