@@ -409,3 +409,113 @@ select.valeur {
 .btn-partage.whatsapp {
     background-color: #25d366;
 }
+
+/* administrateur */
+
+.conteneur-admin {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.table-utilisateurs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-utilisateurs th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table-utilisateurs td {
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    color: #666;
+}
+
+.statut {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.statut.actif {
+    background-color: #e3fcef;
+    color: #0d915d;
+}
+
+.statut.banni {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.statut.vip {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-vip {
+    background-color: #ffd700;
+    color: #000;
+    margin-right: 8px;
+}
+
+.btn-bannir {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+
+.barre-recherche {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.avatar-utilisateur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.info-utilisateur {
+    display: flex;
+    align-items: center;
+}
+
+.email-utilisateur {
+    color: #666;
+    font-size: 0.9em;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
