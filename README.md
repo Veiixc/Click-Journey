@@ -2,7 +2,8 @@
 
 ## Description
 
-Bienvenue chez Time Traveler, une agence de voyages qui vous emmène les traces des civilisations antiques. Notre site propose des séjours en fonction de vos critères.
+Bienvenue chez Time Traveler, une agence de voyages qui vous emmène sur les traces des civilisations antiques. Notre site propose des séjours en fonction de vos critères.
+
 Vous trouverez forcement votre bonheur.
 
 ## Fonctionnalités
@@ -45,7 +46,7 @@ AGBAVOR Emmanuel
 
 BRINGUIER Valérian
 
-HOUIDI ADEM
+HOUIDI Adem
 
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
