@@ -610,3 +610,77 @@ tr:hover {
     color: gray;
     font-style: italic;
 }
+
+
+.conteneur-recherche {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conteneur-recherche h1 {
+    text-align: center;
+    color: #F1A208;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.filtres-recherche {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grille-filtres {
+    display: grid;
+    /* mets en bloc et non en colonne */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.groupe-filtre {
+    display: flex;
+    flex-direction: column;
+}
+
+.groupe-filtre label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.groupe-filtre select,
+.groupe-filtre input {
+    padding: 0.75rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.groupe-filtre select:focus,
+.groupe-filtre input:focus {
+    outline: none;
+    border-color: #F1A208;
+}
+
+.filtres-supplementaires {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.bouton-recherche {
+    width: 100%;
+    padding: 1rem;
+    background-color: #F1A208;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}

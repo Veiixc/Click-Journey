@@ -1,6 +1,5 @@
 # Click-Journey
 
-
 ## Description
 
 Bienvenue chez Time Traveler, une agence de voyages qui vous emmène les traces des civilisations antiques. Notre site propose des séjours en fonction de vos critères.
@@ -9,7 +8,7 @@ Vous trouverez forcement votre bonheur.
 ## Fonctionnalités
 
 - **Inscription et connexion** : Les utilisateurs peuvent créer un compte pour accéder à des fonctionnalités personnalisées.
-- **Options personnalisables** : Les utilisateurs peuvent modifier certains aspects de leur voyage, y compris l'hébergement, la restauration et les activités.
+- **Profil** : Les utilisateurs peuvent modifier les données associées à leur compte.
 - **Recherche de voyages** : Un système de filtrage pour trouver rapidement les séjours qui vous intéressent.
 - **Gestion des utilisateurs** : Interface pour que les administrateurs puissent gérer les comptes utilisateurs.
 
@@ -40,8 +39,8 @@ git clone https://github.com/Veiixc/Click-Journey.git
 ```
 2. Ouvrez n'importe quelle page html (de préférence page-accueil)
 
-
 ## Auteurs
+
 AGBAVOR Emmanuel
 
 BRINGUIER Valérian
