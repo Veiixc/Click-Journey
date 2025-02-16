@@ -1,6 +1,5 @@
 # Click-Journey
 
-# Découvre l'Ancien Monde
 
 ## Description
 
@@ -27,11 +26,10 @@ Vous trouverez forcement votre bonheur.
 Pour télécharger et installer ce projet, suivez ces étapes :
 
 1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/decouvre-lancien-monde.git
-
-
-
+```sh
+git clone https://github.com/votre-utilisateur/decouvre-lancien-monde.git
+```
+2. Ouvrez n'importe quelle page html (de préférence page-accueil)
 
 
 ## Auteurs
