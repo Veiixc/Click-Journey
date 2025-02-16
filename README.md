@@ -13,13 +13,22 @@ Vous trouverez forcement votre bonheur.
 - **Recherche de voyages** : Un système de filtrage pour trouver rapidement les séjours qui vous intéressent.
 - **Gestion des utilisateurs** : Interface pour que les administrateurs puissent gérer les comptes utilisateurs.
 
-## Technologies Utilisées
+## Language
 
-- **HTML** : Structure du site web.
-- **CSS** : Styles et mise en page.
-- **JavaScript** : Interactivité et fonctionnalités dynamiques.
-- **PHP** : Gestion des données côté serveur.
+[HTML]: https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML-url]: https://developer.mozilla.org/fr/docs/Web/HTML
 
+[![HTML][HTML]][HTML-url]
+
+[css]: https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white&color=blue
+[css-url]: https://developer.mozilla.org/fr/docs/Web/CSS/Reference
+
+[![css][css]][css-url]
+
+[js]: https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&color=yellow
+[js-url]: https://developer.mozilla.org/fr/docs/Web/JavaScript
+
+[![js][js]][js-url]
 
 ## Installation
 
@@ -27,7 +36,7 @@ Pour télécharger et installer ce projet, suivez ces étapes :
 
 1. Clonez le dépôt :
 ```sh
-git clone https://github.com/votre-utilisateur/decouvre-lancien-monde.git
+git clone https://github.com/Veiixc/Click-Journey.git
 ```
 2. Ouvrez n'importe quelle page html (de préférence page-accueil)
 
