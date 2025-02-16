@@ -22,6 +22,76 @@
             <a href="connexion.html"><button>Se connecter / S'inscrire</button></a>
         </div>
     </header>
+    <div class="conteneur">
+        <div class="conteneur-profil">
+            <h2>Mon Profil</h2>
+            <div class="section-photo-profil">
+                <div class="photo-profil">
+                    <img id="imageProfil" src="https://ui-avatars.com/api/?name=User&background=random&size=150"
+                        alt="Photo de profil">
+                    <input type="file" id="televerserImage" accept="image/*" style="display: none"><br>
+                    <button class="bouton-changer-photo">
+                        <i class="fas fa-camera"></i> Changer la photo
+                    </button>
+                </div>
+            </div>
+            <div class="section-profil">
+                <div class="champ-profil">
+                    <span class="etiquette">Nom : </span>
+                    <span id="nom" class="valeur">Bringuier Valérian</span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+                <div class="champ-profil">
+                    <span class="etiquette">Email : </span>
+                    <span id="courriel" class="valeur">Valerian.Bringuier@free.fr</span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+                <div class="champ-profil">
+                    <span class="etiquette">Téléphone : </span>
+                    <span id="telephone" class="valeur">+33 6 12 34 56 78</span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+                <div class="champ-profil">
+                    <span class="etiquette">Genre : </span>
+                    <span id="genre" class="valeur">Non spécifié</span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+                <div class="champ-profil">
+                    <span class="etiquette">Date de naissance : </span>
+                    <span id="dateNaissance" class="valeur">23/11/2006</span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+            </div>
+            <div class="partage-social">
+                <h3>Partager mon profil</h3>
+                <div class="boutons-sociaux">
+                    <button class="btn-partage facebook">
+                        <i></i> Facebook
+                    </button>
+                    <button class="btn-partage twitter">
+                        <i></i> Twitter
+                    </button>
+                    <button class="btn-partage linkedin">
+                        <i></i> LinkedIn
+                    </button>
+                    <button class="btn-partage whatsapp">
+                        <i></i> WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <script src="../js/script.js"></script>
 </body>
