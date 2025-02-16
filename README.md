@@ -1,13 +1,11 @@
 # Click-Journey
 
-
-# Click-Journey
-
 # Découvre l'Ancien Monde
 
 ## Description
 
-Bienvenue sur le projet **Découvre l'Ancien Monde**, une agence de voyages qui vous permet de parcourir les traces des civilisations antiques. Ce site propose des séjours prédéfinis, où les utilisateurs peuvent choisir des circuits spécifiques tout en adaptant certaines options.
+Bienvenue chez Time Traveler, une agence de voyages qui vous emmène les traces des civilisations antiques. Notre site propose des séjours en fonction de vos critères.
+Vous trouverez forcement votre bonheur.
 
 ## Fonctionnalités
 
@@ -39,7 +37,7 @@ Pour télécharger et installer ce projet, suivez ces étapes :
 ## Auteurs
 AGBAVOR Emmanuel
 
-BRINGUIER Valérian  
+BRINGUIER Valérian
 
 HOUIDI ADEM
 
