@@ -48,6 +48,9 @@ BRINGUIER Valérian
 
 HOUIDI Adem
 
+## White board du projet
+[White board](https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzFjYjdmYzQ4MmZlNDQ3ZDBiYWY5MWMwMTdiYjc3ZTYwX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRF8wMjRkMGRlYS05OGQxLTRkNzItODM0Mi1kYWRhNGQ2ODFhMzg=)
+
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
