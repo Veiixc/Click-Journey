@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Voyage 1",
+        "start_date": "2023-06-01",
+        "end_date": "2023-06-10",
+        "duration": 10,
+        "steps": [
+            {
+                "title": "Step 1",
+                "arrival_date": "2023-06-01",
+                "departure_date": "2023-06-03",
+                "duration": 3,
+                "location": "City 1",
+                "options": [
+                    {
+                        "name": "Option 1",
+                        "default_value": "Value 1",
+                        "price_per_person": 100
+                    }
+                ]
+            }
+        ],
+        "specifics": "Specific details about the voyage",
+        "people": ["Person 1", "Person 2"],
+        "total_price": 1000,
+        "status": "paid"
+    },
+    {
+        "id": 2,
+        "title": "Voyage 2",
+        "start_date": "2023-07-01",
+        "end_date": "2023-07-15",
+        "duration": 15,
+        "steps": [
+            {
+                "title": "Step 1",
+                "arrival_date": "2023-07-01",
+                "departure_date": "2023-07-05",
+                "duration": 5,
+                "location": "City 2",
+                "options": [
+                    {
+                        "name": "Option 1",
+                        "default_value": "Value 1",
+                        "price_per_person": 150
+                    }
+                ]
+            }
+        ],
+        "specifics": "Specific details about the voyage",
+        "people": ["Person 3", "Person 4"],
+        "total_price": 1500,
+        "status": "in progress"
+    }
+]

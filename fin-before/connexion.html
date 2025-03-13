@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Connexion</title>
+    <link rel="icon" type="img/png" href="img/logo-site.png">
+</head>
+
+<body>
+    <?php
+    require_once 'php/check_session.php';
+    redirectIfLoggedIn();
+    ?>
+    <header>
+        <div class="logo-conteneur">
+            <a href="page-acceuil.html" class="logo"><img src="img/logo.png"></a>
+            <span id="test">Time Traveler</span>
+        </div>
+        <div class="header-links">
+            <!-- <button>Recherche de voyage</button> -->
+            <a href="administrateur.html"><button>Administrateur</button></a>
+            <a href="recherche.html"><button>Rechercher</button></a>
+            <a href="présentation.html"><button>Notre agence</button></a>
+            <a href="profil.html"><button>Profil</button></a>
+            <a href="connexion.html"><button>Se connecter / S'inscrire</button></a>
+        </div>
+    </header>
+    <div class="conteneur">
+        <div id="formulaire-connexion" class="formulaire">
+            <h2>Connexion</h2>
+            <form action="php/login.php" method="post">
+                <label for="login">Email</label>
+                <input type="email" id="login" name="login" required>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+                <div class="form-bouton">
+                    <button type="submit">Se connecter</button>
+                    <button class="connexion-google" type="button">Se connecter avec Google</button>
+                </div>
+            </form>
+            <p>Pas de compte ? <a class="Connexion" href="inscription.html" id="montrer-inscription">S'inscrire</a></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

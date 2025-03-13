@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/paiement.css">
+    <title>Paiement</title>
+</head>
+<body>
+    <?php
+    require_once '../php/check_session.php';
+    requireLogin();
+    
+    // Récupération des données du voyage
+    $voyage_id = $_GET['voyage_id'] ?? null;
+    if (!$voyage_id) {
+        header('Location: ../recherche.html');
+        exit();
+    }
+    ?>
+    
+    <div class="conteneur-paiement">
+        <div class="recap-voyage">
+            <h2>Récapitulatif de votre voyage</h2>
+            <div id="voyage-details"></div>
+        </div>
+
+        <form id="paiement-form" action="process_paiement.php" method="POST">
+            <h3>Informations de paiement</h3>
+            
+            <div class="form-group">
+                <label>Numéro de carte</label>
+                <div class="card-number-group">
+                    <input type="text" maxlength="4" class="card-input" required>
+                    <input type="text" maxlength="4" class="card-input" required>
+                    <input type="text" maxlength="4" class="card-input" required>
+                    <input type="text" maxlength="4" class="card-input" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nom du titulaire</label>
+                <input type="text" name="card_holder" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date d'expiration</label>
+                    <div class="expiry-date">
+                        <select name="expiry_month" required>
+                            <option value="">Mois</option>
+                            <?php for($i = 1; $i <= 12; $i++): ?>
+                                <option value="<?= sprintf("%02d", $i) ?>"><?= sprintf("%02d", $i) ?></option>
+                            <?php endfor; ?>
+                        </select>
+                        <select name="expiry_year" required>
+                            <option value="">Année</option>
+                            <?php 
+                            $year = date('Y');
+                            for($i = $year; $i <= $year + 10; $i++): ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" name="cvv" maxlength="3" required>
+                </div>
+            </div>
+
+            <input type="hidden" name="voyage_id" value="<?= htmlspecialchars($voyage_id) ?>">
+            <button type="submit" class="btn-payer">Payer</button>
+        </form>
+    </div>
+
+    <script src="js/paiement.js"></script>
+</body>
+</html>
