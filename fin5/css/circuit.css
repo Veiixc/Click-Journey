@@ -1,0 +1,59 @@
+.circuit-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.circuit-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.circuit-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-item {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-item h3 {
+    color: #F1A208;
+    margin-bottom: 0.5rem;
+}
+
+.circuit-description {
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.reserve-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #F1A208;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #d88f07;
+    transform: translateY(-2px);
+}
