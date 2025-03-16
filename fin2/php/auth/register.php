@@ -5,9 +5,17 @@ require_once '../includes/functions.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $users = readCSV('../data/users.csv');
     
+    // Vérifie si le login existe déjà
+    foreach ($users as $user) {
+        if ($user['login'] === $_POST['login']) {
+            echo json_encode(['success' => false, 'message' => 'Ce login existe déjà']);
+            exit();
+        }
+    }
+    
     $newUser = array(
         'login' => $_POST['login'],
-        'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+        'password' => $_POST['password'], // Stockage en clair pour les tests
         'role' => 'user',
         'nom' => $_POST['nom'],
         'prenom' => $_POST['prenom'],
@@ -17,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
     
     $users[] = $newUser;
-    $headers = array_keys($newUser);
+    
+    // Utilise les en-têtes existants du fichier CSV
+    $headers = array('login', 'password', 'role', 'nom', 'prenom', 'date_naissance', 'email', 'date_inscription');
     
     writeCSV('../data/users.csv', $users, $headers);
     
-    header('Location: /fin2/html/connexion.html?success=1');
+    echo json_encode(['success' => true]);
     exit();
 }
 ?>

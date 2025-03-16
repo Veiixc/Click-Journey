@@ -62,11 +62,17 @@
             method: 'POST',
             body: new FormData(this)
         })
-        .then(response => {
-            window.location.href = '/fin2/html/connexion.html?success=1';
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = '/fin2/html/connexion.html?success=1';
+            } else {
+                alert(data.message || 'Erreur lors de l\'inscription');
+            }
         })
         .catch(error => {
             console.error('Erreur:', error);
+            alert('Erreur lors de l\'inscription');
         });
     });
     </script>
