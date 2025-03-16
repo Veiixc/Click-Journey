@@ -1,0 +1,6 @@
+login,password,role,nom,prenom,date_naissance,email,date_inscription
+admin,admin123,admin,Admin,System,2000-01-01,admin@site.com,2024-01-01
+superadmin,super123,admin,Super,Admin,1990-01-01,superadmin@site.com,2024-01-01
+user1,pass123,user,Bringuier,Valérian,2000-05-15,valerian.b@exemple.com,2024-01-01
+user2,pass123,user,Agbavor,Emmanuel,1999-08-20,emmanuel.a@exemple.com,2024-01-01
+user3,pass123,user,Houidi,Adem,2001-03-10,adem.h@exemple.com,2024-01-01
