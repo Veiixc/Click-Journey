@@ -38,15 +38,22 @@
             </div>
             <div class="section-profil">
                 <div class="champ-profil">
-                    <span class="etiquette">Nom : </span>
-                    <span id="nom" class="valeur">Bringuier Valérian</span>
+                    <span class="etiquette">Nom complet : </span>
+                    <span id="nom" class="valeur"></span>
                     <button class="btn-editer">
                         <i></i>✏️
                     </button>
                 </div>
                 <div class="champ-profil">
                     <span class="etiquette">Email : </span>
-                    <span id="courriel" class="valeur">Valerian.Bringuier@free.fr</span>
+                    <span id="courriel" class="valeur"></span>
+                    <button class="btn-editer">
+                        <i></i>✏️
+                    </button>
+                </div>
+                <div class="champ-profil">
+                    <span class="etiquette">Date de naissance : </span>
+                    <span id="dateNaissance" class="valeur"></span>
                     <button class="btn-editer">
                         <i></i>✏️
                     </button>
@@ -61,13 +68,6 @@
                 <div class="champ-profil">
                     <span class="etiquette">Genre : </span>
                     <span id="genre" class="valeur">Non spécifié</span>
-                    <button class="btn-editer">
-                        <i></i>✏️
-                    </button>
-                </div>
-                <div class="champ-profil">
-                    <span class="etiquette">Date de naissance : </span>
-                    <span id="dateNaissance" class="valeur">23/11/2006</span>
                     <button class="btn-editer">
                         <i></i>✏️
                     </button>
@@ -100,6 +100,17 @@
         </div>
 
         <script src="../js/script.js"></script>
+        <script>
+            // Charger les données du profil
+            fetch('/fin2/php/profile/get_profile.php')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('nom').textContent = data.nom_complet;
+                    document.getElementById('courriel').textContent = data.email;
+                    document.getElementById('dateNaissance').textContent = data.date_naissance;
+                })
+                .catch(error => console.error('Erreur:', error));
+        </script>
 </body>
 
 </html>

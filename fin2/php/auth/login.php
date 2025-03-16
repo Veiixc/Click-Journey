@@ -8,10 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
     foreach ($users as $user) {
-        if ($user['login'] === $login && $user['password'] === $password) {  // Comparaison directe
+        if ($user['login'] === $login && $user['password'] === $password) {
             $_SESSION['user_id'] = $login;
             $_SESSION['user_role'] = $user['role'];
             $_SESSION['nom'] = $user['nom'];
+            $_SESSION['prenom'] = $user['prenom'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['date_naissance'] = $user['date_naissance'];
             
             echo json_encode(['success' => true, 'role' => $user['role']]);
             exit();
