@@ -1,0 +1,5 @@
+id,titre,duree,prix,transport,description,note,date_ajout
+1,Circuit Japon,15,4789,bateau/avion,Le voyage débute à Kyoto...,4.8,2024-03-01
+2,Circuit Egypte,20,5989,bateau,Le voyage débute au Caire...,4.6,2024-03-05
+3,Circuit Italie,11,2289,train,Bienvenue à Gênes...,4.5,2024-03-10
+4,Circuit UK,8,1800,bus/train,Votre voyage commence à Bath...,4.7,2024-03-15
