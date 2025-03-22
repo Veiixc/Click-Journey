@@ -30,7 +30,7 @@ Vous trouverez forcement votre bonheur.
 
 [![js][js]][js-url]
 
-[php]: https://img.shields.io/badge/php-4E5B93?style=for-the-badge&logo=php&logoColor=white&color=yellow
+[php]: https://img.shields.io/badge/php-%23777BB4.svg?&logo=php&logoColor=white
 [php-url]: https://www.php.net/docs.php
 
 [![php][php]][php-url]
