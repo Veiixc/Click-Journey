@@ -30,6 +30,12 @@ Vous trouverez forcement votre bonheur.
 
 [![js][js]][js-url]
 
+[php]: https://img.shields.io/badge/php-4E5B93?style=for-the-badge&logo=php&logoColor=white&color=yellow
+[php-url]: https://www.php.net/docs.php
+
+[![php][php]][php-url]
+
+
 ## Installation
 
 Pour télécharger et installer ce projet, suivez ces étapes :
