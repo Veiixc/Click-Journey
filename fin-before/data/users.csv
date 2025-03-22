@@ -1,8 +1,0 @@
-login,password,role,name,pseudo,birthdate,address,registration_date
-admin1,$2y$10$kMpJ2OGif4XRjhiFVweZje1khvpkdO1knswW5KYRCvWrPv2rGEFd2,admin,"Admin One",admin1,1980-01-01,"123 Admin St","2025-03-13 23:33:32"
-admin2,$2y$10$examplehash,admin,"Admin Two",admin2,1985-01-01,"456 Admin St","2023-01-01 12:00:00"
-user1,$2y$10$examplehash,normal,"User One",user1,1990-01-01,"789 User St","2023-01-01 12:00:00"
-user2,$2y$10$examplehash,normal,"User Two",user2,1995-01-01,"101 User St","2023-01-01 12:00:00"
-user3,$2y$10$examplehash,normal,"User Three",user3,2000-01-01,"202 User St","2023-01-01 12:00:00"
-sqf@gmail.com,$2y$10$uYTL09L/qTiwVIydBIRr5Ox0Gt06qylxbG1rkWCJW4MBzA10V3/my,admin,azrra,dsqd,2025-03-12,sqf@gmail.com,"2025-03-13 20:42:23"
-aaaaaaaaaaaaaaaaaasqf@gmail.com,$2y$10$igQDdlChXxSytbfaAMn9X.xg6AN.jdtU1PysgqiG/ddXxA50ztgxG,normal,aaaaaaaaa,aaaaaaaaaaaaaa,2000-05-02,gdfgdfg@ghmail.com,"2025-03-13 23:05:59"
