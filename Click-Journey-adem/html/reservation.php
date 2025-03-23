@@ -14,6 +14,9 @@ if (!$circuit_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+
+
     <link rel="stylesheet" type="text/css" href="../css/journey.css">
     <title>Réservation</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
@@ -23,12 +26,19 @@ if (!$circuit_id) {
         <div class="logo-conteneur">
             <a href="accueil.php" class="logo"><img src="../img/logo.png"></a>
             <span id="test">Time Traveler</span>
+
+
+
+    
         </div>
         <div class="header-links">
             <a href="administrateur.php"><button>Administrateur</button></a>
             <a href="recherche.php"><button>Rechercher</button></a>
             <a href="présentation.php"><button>Notre agence</button></a>
             <a href="profil.php"><button>Profil</button></a>
+
+
+        
             <a href="../php/auth/logout.php"><button>Se déconnecter</button></a>
         </div>
     </header>
@@ -39,47 +49,44 @@ if (!$circuit_id) {
             
             <form action="../php/reservations/save_choices.php" method="POST">
                 <input type="hidden" name="circuit_id" value="<?php echo htmlspecialchars($circuit_id); ?>">
-                
-                <!-- Ajout des champs de date -->
+
                 <div class="form-group date-selection">
-                    <div class="option-group">
+         <div class="option-group">
                         <label for="date_debut">Date de début</label>
                         <input type="date" id="date_debut" name="date_debut" required 
                                min="<?php echo date('Y-m-d'); ?>">
-                    </div>
-                    <div class="option-group">
+                    </div>           <div class="option-group">
                         <label for="date_fin">Date de fin</label>
                         <input type="date" id="date_fin" name="date_fin" required>
                     </div>
-                </div>
+       </div>
 
-                <!-- Ajout du champ nombre de personnes -->
-                <div class="form-group">
+        <div class="form-group">
                     <label for="nb_personnes">Nombre de personnes</label>
                     <select id="nb_personnes" name="nb_personnes" required>
                         <?php for($i = 1; $i <= 10; $i++): ?>
                             <option value="<?php echo $i; ?>"><?php echo $i; ?> personne<?php echo $i > 1 ? 's' : ''; ?></option>
-                        <?php endfor; ?>
+               <?php endfor; ?>
                     </select>
                 </div>
 
-                <div class="journey-stages">
+          <div class="journey-stages">
                     <?php include '../php/stages/get_stages.php'; ?>
                     
-                    <?php foreach ($stages as $index => $stage): ?>
+              <?php foreach ($stages as $index => $stage): ?>
                     <div class="stage-card">
                         <div class="stage-header">
                             <h3 class="stage-title">Étape <?php echo $index + 1; ?>: <?php echo htmlspecialchars($stage['title']); ?></h3>
                             <span class="stage-duration"><?php echo htmlspecialchars($stage['duration']); ?> jours</span>
                         </div>
-                        
+                    
                         <div class="stage-options">
-                            <div class="option-group">
+                         <div class="option-group">
                                 <label for="lodging-<?php echo $index; ?>">Hébergement</label>
                                 <select id="lodging-<?php echo $index; ?>" name="stages[<?php echo $index; ?>][lodging]" required>
-                                    <option value="">Choisissez un hébergement</option>
+                            <option value="">Choisissez un hébergement</option>
                                     <?php foreach ($stage['lodging_options'] as $option): ?>
-                                        <option value="<?php echo htmlspecialchars($option['id']); ?>">
+                               <option value="<?php echo htmlspecialchars($option['id']); ?>">
                                             <?php echo htmlspecialchars($option['name']); ?>
                                         </option>
                                     <?php endforeach; ?>
@@ -88,21 +95,40 @@ if (!$circuit_id) {
                             
                             <div class="option-group">
                                 <label for="meals-<?php echo $index; ?>">Restauration</label>
+
+
+
                                 <select id="meals-<?php echo $index; ?>" name="stages[<?php echo $index; ?>][meals]">
                                     <option value="none">Sans repas</option>
+
+
+
                                     <option value="breakfast">Petit déjeuner</option>
                                     <option value="half">Demi-pension</option>
+
+
                                     <option value="full">Pension complète</option>
                                 </select>
                             </div>
                             
                             <div class="option-group">
-                                <label for="activities-<?php echo $index; ?>">Activités</label>
+                               
+                            
+                            
+                <label for="activities-<?php echo $index; ?>">Activités</label>
+
+                                
+                                
                                 <select id="activities-<?php echo $index; ?>" name="stages[<?php echo $index; ?>][activities]" multiple>
                                     <?php foreach ($stage['activities'] as $activity): ?>
                                         <option value="<?php echo htmlspecialchars($activity['id']); ?>">
-                                            <?php echo htmlspecialchars($activity['name']); ?>
+              <?php echo htmlspecialchars($activity['name']); ?>
                                         </option>
+
+
+
+
+
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -110,20 +136,31 @@ if (!$circuit_id) {
                             <div class="option-group">
                                 <label for="transport-<?php echo $index; ?>">Transport vers prochaine étape</label>
                                 <select id="transport-<?php echo $index; ?>" name="stages[<?php echo $index; ?>][transport]">
-                                    <?php foreach ($stage['transport_options'] as $transport): ?>
+                                  
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <?php foreach ($stage['transport_options'] as $transport): ?>
                                         <option value="<?php echo htmlspecialchars($transport['id']); ?>">
-                                            <?php echo htmlspecialchars($transport['name']); ?>
+                   <?php echo htmlspecialchars($transport['name']); ?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>
-                            </div>
+                     </div>
+
+
+
                         </div>
                     </div>
-                    <?php endforeach; ?>
+         <?php endforeach; ?>
                 </div>
-                
+         
                 <button type="submit" class="summary-button">Voir le récapitulatif</button>
-            </form>
+    </form>
         </div>
     </div>
     

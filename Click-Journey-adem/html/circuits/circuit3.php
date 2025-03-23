@@ -20,9 +20,16 @@ require_once '../../php/auth/check_auth.php';
         <div class="header-links">
             <a href="../administrateur.php"><button>Administrateur</button></a>
             <a href="../recherche.php"><button>Rechercher</button></a>
+
+
+
             <a href="../présentation.php"><button>Notre agence</button></a>
             <a href="../profil.php"><button>Profil</button></a>
             <?php if(isLoggedIn()): ?>
+
+
+
+
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
@@ -33,21 +40,37 @@ require_once '../../php/auth/check_auth.php';
         <h1>Circuit 3 : L'Italie Historique</h1>
 
         <div class="circuit-details">
+
+
             <div class="circuit-info">
+
+
+
                 <div class="info-item">
                     <h3>Durée</h3>
                     <p>11 jours</p>
+
+
+
+
+
                 </div>
                 <div class="info-item">
                     <h3>Prix</h3>
                     <p>2289€</p>
                 </div>
                 <div class="info-item">
+
+
+
+
                     <h3>Transport</h3>
                     <p>Train</p>
                 </div>
             </div>
 
+
+            
             <div class="circuit-description">
                 <p>Bienvenue à Gênes, ville qui était autrefois l'une des plus grandes puissances maritimes. Son magnifique port et ses palais saurons vous en mettre plein la vue. Là-bas, vous séjournerez comme tout au long du voyage, dans un de nos hôtels partenaires pendant 3 jours. Poursuivez votre découverte de l'Italie, à Rome, ancienne capitale du puissant Empire Romain. Enfin finissez en beauté votre séjour dans la ville de Naples. C'est dans la colline la plus haute de la ville que vous séjournerez. Vous aurez un accès rapide au fameux Castel Nuovo ainsi, qu'à plusieurs vestiges datant de l'époque gréco-romaine où la Renaissance.</p>
             </div>

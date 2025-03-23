@@ -17,10 +17,19 @@ require_once '../../php/auth/check_auth.php';
             <a href="../page-acceuil.php" class="logo"><img src="../../img/logo.png"></a>
             <span id="test">Time Traveler</span>
         </div>
+
+
+
         <div class="header-links">
+
+
+
             <a href="../administrateur.php"><button>Administrateur</button></a>
             <a href="../recherche.php"><button>Rechercher</button></a>
             <a href="../présentation.php"><button>Notre agence</button></a>
+
+
+
             <a href="../profil.php"><button>Profil</button></a>
             <?php if(isLoggedIn()): ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
@@ -29,26 +38,45 @@ require_once '../../php/auth/check_auth.php';
             <?php endif; ?>
         </div>
     </header>
+
+
+
     <div class="circuit-container">
+
+
+
         <h1>Circuit 7 : Tibet Spirituel</h1>
         
         <div class="circuit-details">
+
+
             <div class="circuit-info">
                 <div class="info-item">
                     <h3>Durée</h3>
                     <p>16 jours</p>
                 </div>
                 <div class="info-item">
+
+
+
                     <h3>Prix</h3>
                     <p>4299€</p>
                 </div>
+
+
                 <div class="info-item">
+
+
+
                     <h3>Transport</h3>
                     <p>Train/bus</p>
                 </div>
             </div>
             
             <div class="circuit-description">
+
+
+            
                 <p>Embarquez pour un voyage spirituel au Tibet, avec la visite du palais du Potala à Lhassa, des monastères millénaires, et des paysages à couper le souffle. Découvrez la vie des moines bouddhistes, explorez les marchés traditionnels et admirez la vue sur l'Everest depuis le monastère de Rongbuk.</p>
             </div>
             

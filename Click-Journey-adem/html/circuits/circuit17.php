@@ -23,10 +23,18 @@ require_once '../../php/auth/check_auth.php';
             <a href="../présentation.php"><button>Notre agence</button></a>
             <a href="../profil.php"><button>Profil</button></a>
             <?php if(isLoggedIn()): ?>
+
+
+
+
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
+
+
+
+
         </div>
     </header>
     <div class="circuit-container">
@@ -39,16 +47,25 @@ require_once '../../php/auth/check_auth.php';
                     <p>15 jours</p>
                 </div>
                 <div class="info-item">
+
+
+
+
                     <h3>Prix</h3>
                     <p>3799€</p>
                 </div>
                 <div class="info-item">
                     <h3>Transport</h3>
+
+
                     <p>Bus/avion</p>
                 </div>
             </div>
             
             <div class="circuit-description">
+
+
+            
                 <p>Partez à la découverte du Népal, entre trek dans l'Himalaya et exploration des temples de Katmandou. Visitez la vallée de Katmandou, ses stupas bouddhistes et ses palais historiques. Faites un trek de 5 jours dans la région des Annapurnas avec des vues spectaculaires sur les plus hauts sommets du monde.</p>
             </div>
             

@@ -25,6 +25,9 @@ require_once '../../php/auth/check_auth.php';
             <?php if(isLoggedIn()): ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
+
+
+                
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
         </div>
@@ -32,6 +35,25 @@ require_once '../../php/auth/check_auth.php';
     <div class="circuit-container">
         <h1>Circuit 16 : Mongolie Nomade</h1>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="circuit-details">
             <div class="circuit-info">
                 <div class="info-item">
@@ -47,6 +69,27 @@ require_once '../../php/auth/check_auth.php';
                     <p>4x4/train</p>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
             <div class="circuit-description">
                 <p>Vivez une expérience unique au cœur des steppes mongoles. Séjournez dans des yourtes traditionnelles, rencontrez les nomades et leur mode de vie ancestral. Le circuit inclut la visite du désert de Gobi, du parc national Terelj et des monastères bouddhistes. Une immersion totale dans la culture mongole.</p>

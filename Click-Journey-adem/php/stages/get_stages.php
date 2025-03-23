@@ -1,13 +1,15 @@
 <?php
-// Simulation de données pour les étapes du voyage
-// Dans une vraie application, ces données viendraient d'une base de données
+
 $stages = [
     [
-        'title' => 'Kyoto',
-        'duration' => 4,
+                                 'title' => 'Kyoto',
+                        'duration' => 4,
         'lodging_options' => [
-            ['id' => 'ryokan1', 'name' => 'Ryokan traditionnel 5★'],
+                        ['id' => 'ryokan1', 'name' => 'Ryokan traditionnel 5★'],
             ['id' => 'hotel1', 'name' => 'Hôtel moderne 4★'],
+
+
+
             ['id' => 'guesthouse1', 'name' => 'Maison d\'hôtes locale']
         ],
         'activities' => [
@@ -17,6 +19,7 @@ $stages = [
         ],
         'transport_options' => [
             ['id' => 'train1', 'name' => 'Train rapide'],
+
             ['id' => 'bus1', 'name' => 'Bus touristique']
         ]
     ],
@@ -25,15 +28,25 @@ $stages = [
         'duration' => 5,
         'lodging_options' => [
             ['id' => 'hotel2', 'name' => 'Hôtel 5★ près de la Cité Interdite'],
+
+
             ['id' => 'boutique1', 'name' => 'Hôtel boutique dans le quartier historique']
         ],
         'activities' => [
             ['id' => 'wall1', 'name' => 'Grande Muraille'],
+
+
             ['id' => 'palace1', 'name' => 'Cité Interdite'],
+
+
+
             ['id' => 'market1', 'name' => 'Marché de nuit']
         ],
         'transport_options' => [
             ['id' => 'plane1', 'name' => 'Vol direct'],
+
+
+
             ['id' => 'train2', 'name' => 'Train de nuit']
         ]
     ],
@@ -56,19 +69,19 @@ $stages = [
     ]
 ];
 
-// Ajout des étapes pour le circuit 5 (Mexique)
+
 $circuits[5] = [
     [
         'title' => 'Chichen Itza',
         'duration' => 3,
         'lodging_options' => [
             ['id' => 'boutique1', 'name' => 'Hôtel-boutique colonial 5★'],
-            ['id' => 'hacienda1', 'name' => 'Hacienda de luxe'],
+                                  ['id' => 'hacienda1', 'name' => 'Hacienda de luxe'],
             ['id' => 'hotel1', 'name' => 'Hôtel standard 4★']
         ],
         'activities' => [
-            ['id' => 'pyramid1', 'name' => 'Visite nocturne de Kukulcán'],
-            ['id' => 'cenote1', 'name' => 'Baignade dans le cénote sacré'],
+                      ['id' => 'pyramid1', 'name' => 'Visite nocturne de Kukulcán'],
+                          ['id' => 'cenote1', 'name' => 'Baignade dans le cénote sacré'],
             ['id' => 'cooking1', 'name' => 'Cours de cuisine yucatèque']
         ],
         'transport_options' => [
@@ -80,8 +93,14 @@ $circuits[5] = [
         'title' => 'Uxmal',
         'duration' => 3,
         'lodging_options' => [
+
+
+
             ['id' => 'hacienda2', 'name' => 'Hacienda historique restaurée'],
-            ['id' => 'lodge1', 'name' => 'Lodge de charme'],
+
+
+
+                                ['id' => 'lodge1', 'name' => 'Lodge de charme'],
             ['id' => 'hotel2', 'name' => 'Hôtel colonial']
         ],
         'activities' => [
@@ -113,20 +132,32 @@ $circuits[5] = [
         ]
     ],
     [
+
+
+
+
+
         'title' => 'Tulum',
         'duration' => 4,
         'lodging_options' => [
-            ['id' => 'beach1', 'name' => 'Resort plage 5★'],
-            ['id' => 'boutique2', 'name' => 'Hôtel-boutique écologique'],
-            ['id' => 'villa1', 'name' => 'Villa privée']
+
+                 ['id' => 'beach1', 'name' => 'Resort plage 5★'],
+                                                  ['id' => 'boutique2', 'name' => 'Hôtel-boutique écologique'],
+                                                                          ['id' => 'villa1', 'name' => 'Villa privée']
         ],
         'activities' => [
             ['id' => 'ruins2', 'name' => 'Site archéologique de Tulum'],
-            ['id' => 'snorkel1', 'name' => 'Snorkeling dans les cénotes'],
+                             ['id' => 'snorkel1', 'name' => 'Snorkeling dans les cénotes'],
             ['id' => 'beach2', 'name' => 'Journée plage privée']
         ],
         'transport_options' => [
+
+
+            
+
             ['id' => 'shuttle1', 'name' => 'Navette privée'],
+
+
             ['id' => 'car2', 'name' => 'Location de voiture']
         ]
     ]

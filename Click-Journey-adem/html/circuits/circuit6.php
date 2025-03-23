@@ -23,8 +23,14 @@ require_once '../../php/auth/check_auth.php';
             <a href="../présentation.php"><button>Notre agence</button></a>
             <a href="../profil.php"><button>Profil</button></a>
             <?php if(isLoggedIn()): ?>
+
+
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
+
+
+
+
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
         </div>
@@ -33,17 +39,31 @@ require_once '../../php/auth/check_auth.php';
         <h1>Circuit 6 : La Grèce Antique</h1>
         
         <div class="circuit-details">
+
+
             <div class="circuit-info">
                 <div class="info-item">
+
+
                     <h3>Durée</h3>
                     <p>10 jours</p>
+
+
+
                 </div>
                 <div class="info-item">
                     <h3>Prix</h3>
+
+
+
                     <p>2599€</p>
                 </div>
                 <div class="info-item">
                     <h3>Transport</h3>
+
+
+
+                    
                     <p>Bateau</p>
                 </div>
             </div>

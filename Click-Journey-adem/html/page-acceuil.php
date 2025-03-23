@@ -17,15 +17,22 @@
         </div>
 
         <div class="header-links">
+
+
             <a href="connexion.php" class="effet-titre police-2em">Se connecter / S'inscrire</a>
         </div>
     </header>
-    
+
     <?php
     session_start();
     if(isset($_SESSION['info'])): ?>
         <div style="background-color: #cce5ff; color: #004085; padding: 10px; margin: 10px; border-radius: 5px; text-align: center;">
+
+
             <?php 
+
+
+
                 echo $_SESSION['info'];
                 unset($_SESSION['info']);
             ?>
@@ -35,22 +42,30 @@
     <div class="diaporama-fond">
         <div class="diaporama-container">
             <div class="diapositive"><img src="../img/maya.jpg" alt="Image 1" loading="eager"></div>
-            <div class="diapositive"><img src="../img/rome.jpg" alt="Image 2" loading="eager"></div>
+
+
+
+     <div class="diapositive"><img src="../img/rome.jpg" alt="Image 2" loading="eager"></div>
             <div class="diapositive"><img src="../img/Tah-majal.jpg" alt="Image 3" loading="eager"></div>
             <div class="diapositive"><img src="../img/gêne.jpg" alt="Image 4" loading="eager"></div>
-            <div class="diapositive"><img src="../img/maya.jpg" alt="Image 1" loading="eager"></div>
+       <div class="diapositive"><img src="../img/maya.jpg" alt="Image 1" loading="eager"></div>
         </div>
     </div>
     <main>
+
+
+    
         <div class="titre">
+
+
             <a href="présentation.php" class="effet-titre police-3em">Découvre le monde ancien</a><br>
-            <a href="présentation.php" class="effet-titre police-3em">Et pars sur les traces des civilisations
+    <a href="présentation.php" class="effet-titre police-3em">Et pars sur les traces des civilisations
                 anciennes</a>
-        </div>
+   </div>
     </main>
     <footer>
         <a href="page.php"><img src="../img/twitter.jpg"></a>
-        <a href="page.php"><img src="../img/insta.jpg"></a>
+  <a href="page.php"><img src="../img/insta.jpg"></a>
         <a href="page.php"><img src="../img/linkedin.jpg"></a>
     </footer>
 </body>

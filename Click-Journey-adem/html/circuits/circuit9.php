@@ -20,11 +20,16 @@ require_once '../../php/auth/check_auth.php';
         <div class="header-links">
             <a href="../administrateur.php"><button>Administrateur</button></a>
             <a href="../recherche.php"><button>Rechercher</button></a>
+
+
             <a href="../présentation.php"><button>Notre agence</button></a>
             <a href="../profil.php"><button>Profil</button></a>
             <?php if(isLoggedIn()): ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
+
+
+                
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
         </div>
@@ -38,7 +43,21 @@ require_once '../../php/auth/check_auth.php';
                     <h3>Durée</h3>
                     <p>9 jours</p>
                 </div>
+
+
+
+
+
+
+
+                
                 <div class="info-item">
+
+
+
+
+
+
                     <h3>Prix</h3>
                     <p>2899€</p>
                 </div>

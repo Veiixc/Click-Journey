@@ -25,22 +25,40 @@ require_once '../../php/auth/check_auth.php';
             <?php if(isLoggedIn()): ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
+
+
+
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
         </div>
     </header>
+
+
+
+
     <div class="circuit-container">
         <h1>Circuit 8 : Temples d'Angkor</h1>
+
+
         
         <div class="circuit-details">
             <div class="circuit-info">
+
+
+
                 <div class="info-item">
                     <h3>Durée</h3>
                     <p>12 jours</p>
                 </div>
+
+
+
                 <div class="info-item">
                     <h3>Prix</h3>
                     <p>3499€</p>
+
+
+                    
                 </div>
                 <div class="info-item">
                     <h3>Transport</h3>

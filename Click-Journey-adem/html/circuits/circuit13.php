@@ -29,6 +29,9 @@ require_once '../../php/auth/check_auth.php';
             <?php endif; ?>
         </div>
     </header>
+
+
+
     <div class="circuit-container">
         <h1>Circuit 13 : Iran Antique</h1>
         
@@ -38,12 +41,21 @@ require_once '../../php/auth/check_auth.php';
                     <h3>Durée</h3>
                     <p>12 jours</p>
                 </div>
+
+
+
                 <div class="info-item">
                     <h3>Prix</h3>
                     <p>3299€</p>
                 </div>
+
+
+
                 <div class="info-item">
                     <h3>Transport</h3>
+
+
+                    
                     <p>Train/bus</p>
                 </div>
             </div>

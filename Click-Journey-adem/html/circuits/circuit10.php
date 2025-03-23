@@ -30,16 +30,25 @@ require_once '../../php/auth/check_auth.php';
         </div>
     </header>
     <div class="circuit-container">
+
+
+
         <h1>Circuit 10 : Inde du Sud</h1>
         
         <div class="circuit-details">
             <div class="circuit-info">
+
+
+
                 <div class="info-item">
                     <h3>Durée</h3>
                     <p>14 jours</p>
                 </div>
+
+
                 <div class="info-item">
                     <h3>Prix</h3>
+                    
                     <p>3799€</p>
                 </div>
                 <div class="info-item">

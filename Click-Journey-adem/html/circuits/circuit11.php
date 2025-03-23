@@ -20,17 +20,29 @@ require_once '../../php/auth/check_auth.php';
         <div class="header-links">
             <a href="../administrateur.php"><button>Administrateur</button></a>
             <a href="../recherche.php"><button>Rechercher</button></a>
+
             <a href="../présentation.php"><button>Notre agence</button></a>
             <a href="../profil.php"><button>Profil</button></a>
+
+
             <?php if(isLoggedIn()): ?>
+
+
+
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
+
+
+
+
         </div>
     </header>
     <div class="circuit-container">
         <h1>Circuit 11 : Vietnam Impérial</h1>
+
+
         
         <div class="circuit-details">
             <div class="circuit-info">
@@ -41,11 +53,16 @@ require_once '../../php/auth/check_auth.php';
                 <div class="info-item">
                     <h3>Prix</h3>
                     <p>3699€</p>
+
+
+
                 </div>
                 <div class="info-item">
                     <h3>Transport</h3>
                     <p>Train/bateau</p>
                 </div>
+
+                
             </div>
             
             <div class="circuit-description">

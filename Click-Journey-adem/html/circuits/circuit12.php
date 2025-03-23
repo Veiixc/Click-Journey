@@ -25,6 +25,9 @@ require_once '../../php/auth/check_auth.php';
             <?php if(isLoggedIn()): ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
             <?php else: ?>
+
+
+
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
             <?php endif; ?>
         </div>
@@ -33,12 +36,17 @@ require_once '../../php/auth/check_auth.php';
         <h1>Circuit 12 : Turquie Historique</h1>
         
         <div class="circuit-details">
+
+
+
             <div class="circuit-info">
                 <div class="info-item">
                     <h3>Durée</h3>
                     <p>11 jours</p>
                 </div>
                 <div class="info-item">
+
+
                     <h3>Prix</h3>
                     <p>2999€</p>
                 </div>
@@ -46,9 +54,15 @@ require_once '../../php/auth/check_auth.php';
                     <h3>Transport</h3>
                     <p>Bus/bateau</p>
                 </div>
+
+
+
             </div>
             
             <div class="circuit-description">
+
+
+            
                 <p>De l'ancienne Constantinople aux paysages lunaires de la Cappadoce, ce circuit vous fait découvrir les plus beaux sites de la Turquie. Explorez les basiliques d'Istanbul, admirez les cheminées de fées de la Cappadoce, et naviguez le long de la côte lycienne. Un voyage entre Orient et Occident, mêlant histoire byzantine et ottomane.</p>
             </div>
             
