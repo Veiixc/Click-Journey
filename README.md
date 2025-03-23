@@ -4,13 +4,13 @@
 
 Bienvenue chez Time Traveler, une agence de voyages qui vous emmène sur les traces des civilisations antiques. Notre site propose des séjours en fonction de vos critères.
 
-Vous trouverez forcement votre bonheur.
+Vous trouverez forcement votre bonheur !
 
 ## Fonctionnalités
 
 - **Inscription et connexion** : Les utilisateurs peuvent créer un compte pour accéder à des fonctionnalités personnalisées.
-- **Profil** : Les utilisateurs peuvent modifier les données associées à leur compte.
-- **Recherche de voyages** : Un système de filtrage pour trouver rapidement les séjours qui vous intéressent.
+- **Profil** : Les utilisateurs peuvent modifier les données associées à leur compte et voir leurs réservations.
+- **Recherche de voyages** : Un système de filtrage pour trouver rapidement les séjours qui vous intéressent pour ensuite réserver et payer.
 - **Gestion des utilisateurs** : Interface pour que les administrateurs puissent gérer les comptes utilisateurs.
 
 ## Language
@@ -39,12 +39,31 @@ Vous trouverez forcement votre bonheur.
 ## Installation
 
 Pour télécharger et installer ce projet, suivez ces étapes :
-
 1. Clonez le dépôt :
 ```sh
 git clone https://github.com/Veiixc/Click-Journey.git
 ```
-2. Ouvrez n'importe quelle page html (de préférence page-accueil)
+- **Sur linux**
+2. Lancez le serveur dans le terminal : 
+```sh
+php -S localhost:8080
+```
+3. Accedez au site web via internet :
+```sh
+http://localhost:8080/Click-Journey-adem/html/page-acceuil.php
+```
+- **Sous Windows**
+2. Télécharger et installer WAMP :
+```sh
+http://www.wampserver.com
+```
+- **Sur Mac**
+2. Télécharger et installer MAMP :
+```sh
+http://www.mamp.info/en/index.html
+```
+
+
 
 ## Auteurs
 
