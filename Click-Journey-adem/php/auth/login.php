@@ -57,7 +57,7 @@ header('Location: /Click-Journey-adem/html/connexion.php');
         exit();
     }
     
-    // Connexion réussie : initialisation de la session
+    // si la connexion marche 
     $_SESSION['user_id'] = $userFound['login'];
 
 
