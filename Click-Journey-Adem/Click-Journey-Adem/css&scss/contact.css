@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+body {
+  margin:0;
+}
+
+
+a img{
+  width: 50%;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.title1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin: 20px 0;
+  font-family: 'Georgia', serif;
+
+
+
+  background: linear-gradient(45deg, #ff0909, #f06595, #eea72f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
+
+
+
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: transform 0.3s;
+
+  margin-bottom: 25px;
+}
+
+.title1:hover {
+  transform: translateY(0);
+}
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+.error {
+    border: 1px solid #f00;
+}
+
+
+
+.container {
+  border-radius: 20px;
+  background-color:silver;
+  
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 20px;
+  max-width: 1200px;
+
+
+  margin: 0 auto;
+  margin-top: 50px;
+
+  
+
+} 
+
+
+
+
+
+.boutton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+
+
+  
+}
+
+.vrai_boutton {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  margin-top: 20px;
+}
+
+.vrai_boutton:hover {
+  background-color: #45a049;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+* {
+  font-family: Roboto;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#fname{
+  width: 100%;
+  padding: 15px;
+  font-size: 36px;
+  color: rgb(6, 6, 6);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+#lname{
+  width: 100%;
+  padding: 15px;
+  font-size: 36px;
+  color: rgb(6, 6, 6);
+  cursor: auto;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+
+#subject{
+
+  width: 100%;
+  padding: 15px;
+  font-size: 36px;
+  color: rgb(6, 6, 6);
+  cursor: auto;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+
+}
+.label{
+  width: 100%;
+  padding: 15px;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+  cursor: auto;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+
+}
