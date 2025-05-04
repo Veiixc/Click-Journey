@@ -1,5 +1,6 @@
 <?php
 require_once '../php/auth/check_auth.php';
+require_once '../php/cart/cart_functions.php';
 
 
 $circuits = [
@@ -82,11 +83,10 @@ $circuits_aleatoires =             [$circuits[$indices[0]], $circuits[$indices[1
 
 
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <title>Notre Agence</title>
-
-
-
+    <title>Notre agence</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
+    <script src="../js/theme-switcher.js" defer></script>
+    <script src="../js/notifications.js" defer></script>
 </head>
 
 <body>
@@ -100,12 +100,14 @@ $circuits_aleatoires =             [$circuits[$indices[0]], $circuits[$indices[1
 
 
         <div class="header-links">
-
-
-
             <a href="administrateur.php"><button>Administrateur</button></a>
-  <a href="recherche.php"><button>Rechercher</button></a>
+            <a href="recherche.php"><button>Rechercher</button></a>
             <a href="présentation.php"><button>Notre agence</button></a>
+            <a href="cart.php" class="cart-badge"><button>Panier</button>
+                <?php if(isLoggedIn() && getCartItemCount() > 0): ?>
+                    <span class="cart-count"><?php echo getCartItemCount(); ?></span>
+                <?php endif; ?>
+            </a>
    <a href="profil.php"><button>Profil</button></a>
 
 
@@ -145,18 +147,22 @@ $circuits_aleatoires =             [$circuits[$indices[0]], $circuits[$indices[1
 
 
                 <div class="circuit-item">
-                    <h3>Circuit 14 - Antarctique</h3>
-                    <p>21 jours - 5999€</p>
-                    <p>Partez à l'aventure en Antarctique...</p>
+                    <h3>Circuit 16 - Mongolie</h3>
+                    <p>14 jours - 3999€</p>
+                    <p>Les steppes mongoles et la vie nomade...</p>
+                    <div class="circuit-actions">
+                        <a href="../php/cart/add_to_cart.php?circuit_id=16" class="add-to-cart-btn">Ajouter au panier</a>
+                        <a href="circuits/circuit16.php" class="details-btn">Voir détails</a>
+                    </div>
                 </div>
                 <div class="circuit-item">
-
-
-
-
-                    <h3>Circuit 15 - Transsibérien</h3>
-                    <p>18 jours - 4899€</p>
-                    <p>Le Transsibérien de Moscou à Vladivostok...</p>
+                    <h3>Circuit 17 - Himalaya</h3>
+                    <p>15 jours - 3799€</p>
+                    <p>Trek dans l'Himalaya et découverte des temples...</p>
+                    <div class="circuit-actions">
+                        <a href="../php/cart/add_to_cart.php?circuit_id=17" class="add-to-cart-btn">Ajouter au panier</a>
+                        <a href="circuits/circuit17.php" class="details-btn">Voir détails</a>
+                    </div>
                 </div>
             </div>
             
@@ -199,6 +205,10 @@ $circuits_aleatoires =             [$circuits[$indices[0]], $circuits[$indices[1
         <h3>Circuit <?php echo $circuit['id']; ?> - <?php echo $circuit['titre']; ?></h3>
       <p><?php echo $circuit['duree']; ?> jours - <?php echo $circuit['prix']; ?>€</p>
                     <p><?php echo $circuit['description']; ?></p>
+                    <div class="circuit-actions">
+                        <a href="../php/cart/add_to_cart.php?circuit_id=<?php echo $circuit['id']; ?>" class="add-to-cart-btn">Ajouter au panier</a>
+                        <a href="circuits/circuit<?php echo $circuit['id']; ?>.php" class="details-btn">Voir détails</a>
+                    </div>
                 </div>
 
 
@@ -215,217 +225,211 @@ $circuits_aleatoires =             [$circuits[$indices[0]], $circuits[$indices[1
 
 
 
-            <a href="circuits/circuit1.php" class="circuit">
-           <h2>Circuit 1</h2>
-
-
-           
+            <div class="circuit">
+                <h2>Circuit 1</h2>
                 <p>Durée : 15 jours</p>
-          <p>Prix : 4789€</p>
-
-
-
+                <p>Prix : 4789€</p>
                 <p>Moyens de locomotion : bateau et/ou avion</p>
                 <p>Le voyage débute à Kyoto...</p>
-            </a>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=1" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit1.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
 
 
 
-      <a href="circuits/circuit2.php" class="circuit">
+            <div class="circuit">
                 <h2>Circuit 2</h2>
-
-
                 <p>Durée : 20 jours</p>
-
-
-          <p>Prix : 5989€</p>
-
-
-
+                <p>Prix : 5989€</p>
                 <p>Moyens de locomotion : bateau</p>
                 <p>Le voyage débute au Caire...</p>
-
-
-
-            </a>
-            <a href="circuits/circuit3.php" class="circuit">
-          <h2>Circuit 3</h2>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=2" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit2.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
+                <h2>Circuit 3</h2>
                 <p>Durée : 11 jours</p>
-         <p>Prix : 2289€</p>
-
-
-
+                <p>Prix : 2289€</p>
                 <p>Moyens de locomotion : train</p>
-
-
-
                 <p>Bienvenue à Gênes...</p>
-            </a>
-            <a href="circuits/circuit4.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=3" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit3.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 4</h2>
                 <p>Durée : 8 jours</p>
-
-
-
                 <p>Prix : 1800€</p>
                 <p>Moyens de locomotion : bus et train</p>
                 <p>Votre voyage commence à Bath...</p>
-            </a>
-            <a href="circuits/circuit5.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=4" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit4.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 5</h2>
                 <p>Durée : 13 jours</p>
-
-
-
                 <p>Prix : 3999€</p>
-   <p>Moyens de locomotion : bus et avion</p>
+                <p>Moyens de locomotion : bus et avion</p>
                 <p>Découvrez les sites mayas...</p>
-            </a>
-            <a href="circuits/circuit6.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=5" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit5.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 6</h2>
-
-
-
-       <p>Durée : 10 jours</p>
+                <p>Durée : 10 jours</p>
                 <p>Prix : 2999€</p>
-
-
-
                 <p>Moyens de locomotion : voiture</p>
                 <p>Explorez les Alpes...</p>
-            </a>
-            <a href="circuits/circuit7.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=6" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit6.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 7</h2>
-
-
-
                 <p>Durée : 16 jours</p>
-
-
-
                 <p>Prix : 4299€</p>
                 <p>Moyens de locomotion : train/bus</p>
                 <p>Découvrez les monastères du toit du monde...</p>
-            </a>
-            <a href="circuits/circuit8.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=7" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit7.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 8</h2>
                 <p>Durée : 12 jours</p>
-          <p>Prix : 3499€</p>
-
-
-
+                <p>Prix : 3499€</p>
                 <p>Moyens de locomotion : bus/bateau</p>
                 <p>Explorez les temples d'Angkor...</p>
-
-
-
-
-
-
-
-            </a>
-            <a href="circuits/circuit9.php" class="circuit">
-            <h2>Circuit 9</h2>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=8" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit8.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
+                <h2>Circuit 9</h2>
                 <p>Durée : 14 jours.</p>
                 <p>Prix : 4599€</p>
-
-
-
-      <p>Moyens de locomotion : avion</p>
-              <p>Découvrez les merveilles de l'Australie...</p>
-            </a>
-            <a href="circuits/circuit10.php" class="circuit">
+                <p>Moyens de locomotion : avion</p>
+                <p>Découvrez les merveilles de l'Australie...</p>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=9" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit9.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 10</h2>
-
-
-
                 <p>Durée : 7 jours.</p>
                 <p>Prix : 1999€</p>
-
-
-
                 <p>Moyens de locomotion : train</p>
                 <p>Visitez les châteaux de la Loire...</p>
-            </a>
-            <a href="circuits/circuit11.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=10" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit10.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 11</h2>
-
-
-
                 <p>Durée : 9 jours.</p>
-      <p>Prix : 2599€</p>
-   <p>Moyens de locomotion : bus</p>
+                <p>Prix : 2599€</p>
+                <p>Moyens de locomotion : bus</p>
                 <p>Partez à la découverte de l'Andalousie...</p>
-            </a>
-            <a href="circuits/circuit12.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=11" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit11.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 12</h2>
                 <p>Durée : 16 jours.</p>
                 <p>Prix : 4999€</p>
-         <p>Moyens de locomotion : bateau</p>
+                <p>Moyens de locomotion : bateau</p>
                 <p>Explorez les fjords de Norvège...</p>
-            </a>
-            <a href="circuits/circuit13.php" class="circuit">
-     <h2>Circuit 13</h2>
-       <p>Durée : 18 jours</p>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=12" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit12.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
+                <h2>Circuit 13</h2>
+                <p>Durée : 18 jours</p>
                 <p>Prix : 5499€</p>
-        <p>Moyens de locomotion : avion</p>
+                <p>Moyens de locomotion : avion</p>
                 <p>Découvrez les merveilles de l'Amérique du Sud...</p>
-            </a>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=13" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit13.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <a href="circuits/circuit14.php" class="circuit">
+            <div class="circuit">
                 <h2>Circuit 14</h2>
                 <p>Durée : 21 jours</p>
                 <p>Prix : 5999€</p>
                 <p>Moyens de locomotion : bateau et avion</p>
                 <p>Partez à l'aventure en Antarctique...</p>
-            </a>
-            <a href="circuits/circuit15.php" class="circuit">
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=14" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit14.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
                 <h2>Circuit 15</h2>
                 <p>Durée : 18 jours,</p>
-        <p>Prix : 4899€</p>
+                <p>Prix : 4899€</p>
                 <p>Moyens de locomotion : train</p>
                 <p>Le Transsibérien de Moscou à Vladivostok...</p>
-            </a>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=15" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit15.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
 
-
-
-            <a href="circuits/circuit16.php" class="circuit">
+            <div class="circuit">
                 <h2>Circuit 16</h2>
-
-             <p>Durée : 14 jours</p>
-
-
-
-
-
-            <p>Prix : 3999€</p>
+                <p>Durée : 14 jours</p>
+                <p>Prix : 3999€</p>
                 <p>Moyens de locomotion : 4x4/train</p>
                 <p>Les steppes mongoles et la vie nomade...</p>
-
-            </a>
-            <a href="circuits/circuit17.php" class="circuit">
-          <h2>Circuit 17</h2>
-       <p>Durée : 15 jours</p>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=16" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit16.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
+            
+            <div class="circuit">
+                <h2>Circuit 17</h2>
+                <p>Durée : 15 jours</p>
                 <p>Prix : 3799€</p>
-     <p>Moyens de locomotion : bus/avion</p>
+                <p>Moyens de locomotion : bus/avion</p>
                 <p>Trek dans l'Himalaya et découverte des temples...</p>
-            </a>
+                <div class="circuit-actions">
+                    <a href="../php/cart/add_to_cart.php?circuit_id=17" class="add-to-cart-btn">Ajouter au panier</a>
+                    <a href="circuits/circuit17.php" class="details-btn">Voir détails</a>
+                </div>
+            </div>
         </div>
         <div class="conteneur">
             <h1>L'équipe</h1>

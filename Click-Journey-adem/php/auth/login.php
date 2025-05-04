@@ -1,93 +1,91 @@
 <?php
 session_start();
-require_once __DIR__ . '/../includes/functions.php';
+require_once   __DIR__ . '/../includes/functions.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $login = trim($_POST['login'] ?? '');
-    $password = trim($_POST['password'] ?? '');
-    
+if (  $_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
+    $login =   trim($_POST['login'] ?? '');
+    $password =    trim($_POST['password'] ?? '');
 
 
 
-    if (empty($login) || empty($password)) {
-        $_SESSION['error'] = "Tous les champs doivent être remplis";
+    if (empty($login)   || empty(  $password)) {
+        
+        
+        $_SESSION['error']   = "Veuillez remplir tous les champs";
         header('Location: /Click-Journey-adem/html/connexion.php');
+        exit(   );
+    }
+    
+    $csvPath = __DIR__ .  '/../data/users.csv';
+    if (!file_exists($csvPath)) {
+
+
+
+        $_SESSION['error'] = "Erreur système. Veuillez réessayer plus tard.";
+        header(  'Location: /Click-Journey-adem/html/connexion.php');
         exit();
     }
     
-    $csvPath = __DIR__ . '/../data/users.csv';
-    if (!file_exists($csvPath)) {
-     echo "Erreur : Fichier d'utilisateurs introuvable";
-exit();
-    }
-    
     $users = readCSV($csvPath);
-    $userFound = false;
+    $userFound =   false;
 
 
-
-
-
-    foreach ($users as $user) {
-
-
-
-        if ($user['login'] === $login) {
-            $userFound = $user;
+    foreach ( $users as $user) {
+        if (  $user['login'] === $login  && $user['password'] === $password) {
+            
+            
+            $userFound =  $user;
             break;
         }
     }
     
-    if (!$userFound) {
-        $_SESSION['error'] = "Login ou mot de passe incorrect !!";
-
-
-        header('Location: /Click-Journey-adem/html/connexion.php');
+    if ( !$userFound) {
+        
+        
+        
+        $_SESSION['error'] = "Login ou mot de passe incorrect";
+        header(  'Location: /Click-Journey-adem/html/connexion.php'  );
         exit();
     }
     
-    if ($userFound['password'] !== $password) {
+    $_SESSION['user_id']  = $userFound['login'];
+    $_SESSION['user_role'] =  $userFound['role'];
 
 
 
- $_SESSION['error'] = "Login ou mot de passe incorrect";
-header('Location: /Click-Journey-adem/html/connexion.php');
-        exit();
-    }
-    
-    // si la connexion marche 
-    $_SESSION['user_id'] = $userFound['login'];
-
-
-    $_SESSION['user_role'] = $userFound['role'];
-
-
-    $_SESSION['nom'] = $userFound['nom'];
-
-
+    $_SESSION['nom'] =    $userFound['nom'];
     $_SESSION['prenom'] = $userFound['prenom'];
 
 
 
+
     $_SESSION['email'] = $userFound['email'];
-
-
-
-    $_SESSION['date_naissance'] = $userFound['date_naissance'];
+    $_SESSION['date_naissance'] = $userFound[  'date_naissance'  ];
     $_SESSION['telephone'] = $userFound['telephone'];
     
-    $_SESSION['success'] = "Bienvenue " . $userFound['prenom'] . " " . $userFound['nom'] . " !";
-
-
-
+    if (isset($_COOKIE['saved_cart'])) {
+        $saved_cart = json_decode($_COOKIE['saved_cart'], true);
+        if (is_array($saved_cart) && !empty($saved_cart)) {
+            $_SESSION['cart'] = $saved_cart;
+            
+            setcookie('saved_cart', '', time() - 3600, '/');
+        }
+    }
+    
+    $_SESSION['success'] = "Bienvenue " . $userFound['prenom'] . " " . $userFound['nom']   . " !";
+    
+    
     header('Location: /Click-Journey-adem/html/profil.php');
-    exit();
+    exit(   );
 } else {
-    
-    
-    header('Location: /Click-Journey-adem/html/connexion.php');
+
+
+    header( 'Location: /Click-Journey-adem/html/connexion.php'  );
+
+
+
     exit();
 }
 ?>

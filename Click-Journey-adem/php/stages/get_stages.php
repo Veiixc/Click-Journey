@@ -2,14 +2,11 @@
 
 $stages = [
     [
-                                 'title' => 'Kyoto',
-                        'duration' => 4,
+        'title' => 'Kyoto',
+        'duration' => 4,
         'lodging_options' => [
-                        ['id' => 'ryokan1', 'name' => 'Ryokan traditionnel 5★'],
+            ['id' => 'ryokan1', 'name' => 'Ryokan traditionnel 5★'],
             ['id' => 'hotel1', 'name' => 'Hôtel moderne 4★'],
-
-
-
             ['id' => 'guesthouse1', 'name' => 'Maison d\'hôtes locale']
         ],
         'activities' => [
@@ -19,7 +16,6 @@ $stages = [
         ],
         'transport_options' => [
             ['id' => 'train1', 'name' => 'Train rapide'],
-
             ['id' => 'bus1', 'name' => 'Bus touristique']
         ]
     ],

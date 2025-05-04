@@ -1,5 +1,9 @@
 <?php
-require_once '../../php/auth/check_auth.php';
+
+require_once 
+
+  '../../php/auth/check_auth.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +14,7 @@ require_once '../../php/auth/check_auth.php';
     <link rel="stylesheet" type="text/css" href="../../css/circuit.css">
     <title>Circuit 1</title>
     <link rel="icon" type="img/png" href="../../img/logo-site.png">
+    <script src="../../js/theme-switcher.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,14 +27,34 @@ require_once '../../php/auth/check_auth.php';
     <a href="../recherche.php"><button>Rechercher</button></a>
             <a href="../présentation.php"><button>Notre agence</button></a>
        <a href="../profil.php"><button>Profil</button></a>
-            <?php if(isLoggedIn()): ?>
+            <?php 
+            
+            if(
+                
+                isLoggedIn()
+                
+                ): 
+                
+            ?>
                 <a href="../../php/auth/logout.php"><button>Déconnexion</button></a>
-            <?php else: ?>
+            <?php 
+            
+            else: 
+            
+            
+            
+            ?>
 
 
 
                 <a href="../connexion.php"><button>Se connecter / S'inscrire</button></a>
-            <?php endif; ?>
+            <?php 
+            
+            
+            endif; 
+            
+            
+            ?>
         </div>
     </header>
     <main>
@@ -61,10 +86,14 @@ require_once '../../php/auth/check_auth.php';
       <p>Le voyage débute à Kyoto dans l'ancienne capitale impériale du Japon, vous serez hébergé dans un ryokan traditionnel 5 étoiles pendant 4 nuits. Le périple continue ensuite à Pékin dans un hôtel 5 étoiles situé à côté de la fameuse cité interdite. Après 5 nuits en chine, rendez-vous en Inde à Agra la vile où se trouve le Taj Mahal et le Fort rouge.</p>
                 </div>
                 
-         <a href="../reservation.php?circuit=1" class="reserve-button">Réserver ce circuit</a>
+                <div class="action-buttons">
+                    <a href="../../php/cart/add_to_cart.php?circuit_id=1" class="reserve-button">Ajouter au panier</a>
+                    <a href="../../php/cart/add_to_cart.php?circuit_id=1&redirect=customize" class="reserve-button customize">Personnaliser</a>
+                </div>
             </div>
 </div>
     </main>
  
+<script src="../../js/dynamic-pricing.js"></script>
 </body>
 </html>

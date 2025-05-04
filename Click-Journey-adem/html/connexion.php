@@ -1,6 +1,15 @@
 <?php
-require_once '../php/auth/check_auth.php';
+
+
+require_once 
+
+
+    '../php/auth/check_auth.php';
+
+
 redirectIfLoggedIn();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +21,9 @@ redirectIfLoggedIn();
     <title>Connexion</title>
 
     <link rel="icon" type="img/png" href="../img/logo-site.png">
+    <script src="../js/formValidation.js" defer></script>
+    <script src="../js/theme-switcher.js" defer></script>
+    <script src="../js/cart-persistence.js" defer></script>
 </head>
 
 <body>
@@ -40,19 +52,48 @@ redirectIfLoggedIn();
     <div class="conteneur">
         <div id="formulaire-connexion" class="formulaire">
             <h2>Connexion</h2>
-       <form method="post" action="../php/auth/login.php">
-                         <?php if(isset($_SESSION['error'])): ?>
-         <div style="color: red;"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
-     <?php endif; ?>
-   <label for="login">Login</label>
-                <input type="text" id="login" name="login" required>
-         <label for="password">Mot de passe</label>
-           <input type="password" id="password" name="password" required>
+            <form method="post" action="../php/auth/login.php">
+                <?php 
+                
+                
+                if(isset($_SESSION['error'])): 
+                
+                
+                ?>
+                    <div style="color: red;">
+                    
+                    <?php 
+                    
+                    
+                    echo $_SESSION['error']; 
+                    
+                    
+                    unset($_SESSION['error']); 
+                    
+                    
+                    ?>
+                    
+                    </div>
+                <?php 
+                
+                
+                endif; 
+                
+                
+                ?>
+                <div class="form-group">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" name="login" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" maxlength="50" required>
+                </div>
                 <div class="form-bouton">
                     <button type="submit">Se connecter</button>
-        </div>
+                </div>
             </form>
-      <p>Pas de compte ? <a href="inscription.php">S'inscrire ici</a></p>
+            <p>Pas de compte ? <a href="inscription.php">S'inscrire ici</a></p>
         </div>
     </div>
 </body>

@@ -20,21 +20,10 @@ requireLogin();
         </div>
         <div class="header-links">
             <a href="administrateur.php"><button>Administrateur</button></a>
-            <a href="recherche.php"><button>Rechercher
-
-
-  </button></a>
-
-
-       <a href="présentation.php"><button>Notre agence</button></a>
-
-
-
-        
-  <a href="profil.php"><button>Profil</button></a>
-
-
-
+            <a href="recherche.php"><button>Rechercher</button></a>
+            <a href="présentation.php"><button>Notre agence</button></a>
+            <a href="cart.php"><button>Panier</button></a>
+            <a href="profil.php"><button>Profil</button></a>
             <a href="../php/auth/logout.php"><button>Déconnexion</button></a>
         </div>
     </header>
@@ -123,9 +112,10 @@ requireLogin();
       
             <div class="form-buttons">
                 <a href="reservation.php?circuit=<?php echo $_SESSION['circuit_id']; ?>" class="summary-button secondary">Modifier la personnalisation</a>
-      <form action="../php/reservations/confirm.php" method="POST">
+                <a href="cart.php" class="summary-button secondary">Retour au panier</a>
+                <form action="../php/reservations/confirm.php" method="POST">
                     <button type="submit" class="summary-button">Confirmer la réservation</button>
-      </form>
+                </form>
             </div>
     
     

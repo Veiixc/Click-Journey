@@ -42,11 +42,11 @@ $users_slice = array_slice($users, $start, $users_per_page);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <title>Administrateur</title>
-
-
-
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <title>Administration</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
+    <script src="../js/admin.js" defer></script>
+    <script src="../js/theme-switcher.js" defer></script>
 </head>
 <body>
     <header>
@@ -57,10 +57,8 @@ $users_slice = array_slice($users, $start, $users_per_page);
         <div class="header-links">
             <a href="administrateur.php"><button>Administrateur</button></a>
             <a href="recherche.php"><button>Rechercher</button></a>
-
-
-
- <a href="présentation.php"><button>Notre agence</button></a>
+            <a href="présentation.php"><button>Notre agence</button></a>
+            <a href="cart.php"><button>Panier</button></a>
             <a href="profil.php"><button>Profil</button></a>
             <a href="../php/auth/logout.php"><button>Déconnexion</button></a>
         </div>
@@ -149,5 +147,6 @@ $users_slice = array_slice($users, $start, $users_per_page);
         </div>
     </div>
     <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 </html>

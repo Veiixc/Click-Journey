@@ -13,6 +13,7 @@ require_once '../../php/auth/check_auth.php';
 
     
     <link rel="icon" type="img/png" href="../../img/logo-site.png">
+    <script src="../../js/theme-switcher.js" defer></script>
 </head>
 <body>
     <header>

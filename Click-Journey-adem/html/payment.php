@@ -1,10 +1,10 @@
 <?php
 require_once '../php/auth/check_auth.php';
-
-
-
 require_once '../php/payment/cybank_utils.php';
 requireLogin();
+
+// Vider le panier après un paiement réussi
+require_once '../php/cart/cart_functions.php';
 
 if (!isset($_SESSION['circuit_id']) || !isset($_SESSION['date_debut']) || !isset($_SESSION['date_fin'])) {
     header('Location: presentation.php');
@@ -60,13 +60,11 @@ $_SESSION['vendeur'] = $vendeur;
 <body>
     <header>
         <div class="logo-conteneur">
-
-
-
             <a href="page-acceuil.php" class="logo"><img src="../img/logo.png"></a>
             <span id="test">Time Traveler</span>
         </div>
         <div class="header-links">
+            <a href="cart.php"><button>Panier</button></a>
             <a href="profil.php"><button>Profil</button></a>
         </div>
     </header>

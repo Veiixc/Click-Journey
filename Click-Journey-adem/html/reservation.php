@@ -1,5 +1,6 @@
 <?php
 require_once '../php/auth/check_auth.php';
+require_once '../php/cart/cart_functions.php';
 requireLogin();
 
 $circuit_id = isset($_GET['circuit']) ? $_GET['circuit'] : null;
@@ -20,6 +21,40 @@ if (!$circuit_id) {
     <link rel="stylesheet" type="text/css" href="../css/journey.css">
     <title>Réservation</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
+    <style>
+        /* Styles pour les notifications */
+        .notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+        
+        .fade-out {
+            opacity: 0;
+        }
+        
+        /* Indicateur de sauvegarde automatique */
+        .auto-save-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,6 +70,11 @@ if (!$circuit_id) {
             <a href="administrateur.php"><button>Administrateur</button></a>
             <a href="recherche.php"><button>Rechercher</button></a>
             <a href="présentation.php"><button>Notre agence</button></a>
+            <a href="cart.php" class="cart-badge"><button>Panier</button>
+                <?php if(getCartItemCount() > 0): ?>
+                    <span class="cart-count"><?php echo getCartItemCount(); ?></span>
+                <?php endif; ?>
+            </a>
             <a href="profil.php"><button>Profil</button></a>
 
 
@@ -165,5 +205,7 @@ if (!$circuit_id) {
     </div>
     
     <script src="../js/script.js"></script>
+    <script src="../js/dynamic-pricing.js"></script>
+    <script src="../js/auto-add-to-cart.js"></script>
 </body>
 </html>

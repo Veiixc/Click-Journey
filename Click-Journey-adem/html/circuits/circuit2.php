@@ -10,6 +10,7 @@ require_once '../../php/auth/check_auth.php';
     <link rel="stylesheet" type="text/css" href="../../css/circuit.css">
     <title>Circuit 2</title>
     <link rel="icon" type="img/png" href="../../img/logo-site.png">
+    <script src="../../js/theme-switcher.js" defer></script>
 </head>
 <body>
     <header>
