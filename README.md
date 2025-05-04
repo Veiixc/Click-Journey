@@ -53,10 +53,11 @@ php -S localhost:8080
 http://localhost:8080/Click-Journey-adem/html/page-acceuil.php
 ```
 - **Sous Windows**
-2. Télécharger et installer WAMP :
+2. Télécharger et installer XAMP :
 ```sh
-http://www.wampserver.com
+https://www.apachefriends.org/fr/download.html
 ```
+Il faut utiliser le dossier Click-Journey-adem directement, sans le laisser dans un sous-dossier (comme Click-Journey-main par défaut lors du téléchargement). Sinon, cela peut empêcher le bon fonctionnement du programme.
 - **Sur Mac**
 2. Télécharger et installer MAMP :
 ```sh
