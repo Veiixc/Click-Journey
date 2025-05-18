@@ -116,9 +116,9 @@
    </div>
     </main>
     <footer>
-        <a href="page.php">   <img src="../img/twitter.jpg">   </a>
-  <a href="page.php">     <img src="../img/insta.jpg">     </a>
-        <a href="page.php">  <img src="../img/linkedin.jpg">  </a>
+        <a href="https://twitter.com">   <img src="../img/twitter.jpg">   </a>
+        <a href="https://instagram.com">     <img src="../img/insta.jpg">     </a>
+        <a href="https://linkedin.com">  <img src="../img/linkedin.jpg">  </a>
     </footer>
 </body>
 

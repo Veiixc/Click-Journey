@@ -45,6 +45,7 @@ $users_slice = array_slice($users, $start, $users_per_page);
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <title>Administration</title>
     <link rel="icon" type="img/png" href="../img/logo-site.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../js/admin.js" defer></script>
     <script src="../js/theme-switcher.js" defer></script>
 </head>
@@ -68,20 +69,14 @@ $users_slice = array_slice($users, $start, $users_per_page);
             <h1>Gestion des Utilisateurs</h1>
             <form method="GET" action="" class="search-form">
                 <input type="text" name="search" class="barre-recherche" 
-     
-     
-     
-                placeholder="Rechercher des utilisateurs..." 
+                       placeholder="Rechercher des utilisateurs..." 
                        value="<?php echo htmlspecialchars($search); ?>">
-              
-              
-              
                        <button type="submit">Rechercher</button>
             </form>
             
             <?php if (!empty($search)): ?>
                 <p>Résultats pour : "<?php echo htmlspecialchars($search); ?>"
-      <a href="?">Effacer la recherche</a>
+                   <a href="?">Effacer la recherche</a>
                 </p>
             <?php endif; ?>
 
@@ -89,52 +84,92 @@ $users_slice = array_slice($users, $start, $users_per_page);
                 <thead>
                     <tr>
                         <th>Utilisateur</th>
-      <th>Statut</th>
+                        <th>Informations</th>
+                        <th>Statut</th>
                         <th>Date d'Inscription</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($users_slice as $user): ?>
-                    <tr>
+                    <?php foreach($users_slice as $user): 
+                        $isBanned = $user['role'] === 'banned';
+                        $isVip = $user['role'] === 'vip';
+                        $rowStatus = $isBanned ? 'banned' : 'active';
+                    ?>
+                    <tr data-user-login="<?php echo htmlspecialchars($user['login']); ?>" data-status="<?php echo $rowStatus; ?>">
                         <td>
-          <div class="info-utilisateur">
+                            <div class="info-utilisateur">
                                 <img src="../img/profil.svg" alt="Avatar utilisateur" class="avatar-utilisateur">
-           <div>
-                  <?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']);            ?><br>
-
-
-
-                                    <span class="email-utilisateur"><?php echo htmlspecialchars($user['email']); ?>
-                                
-                                
-                                </span>
+                                <div>
+                                    <span><?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); ?></span><br>
+                                    <span class="email-utilisateur"><?php echo htmlspecialchars($user['email']); ?></span>
                                 </div>
                             </div>
-
-
-
-
-
-
-             </td>
-                        <td><span class="statut actif">Actif</span></td>
+                        </td>
+                        <td>
+                            <div class="user-details">
+                                <div>
+                                    <strong>Nom:</strong> 
+                                    <span class="editable" data-field-name="nom" data-field-type="text">
+                                        <?php echo htmlspecialchars($user['nom']); ?>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong>Prénom:</strong> 
+                                    <span class="editable" data-field-name="prenom" data-field-type="text">
+                                        <?php echo htmlspecialchars($user['prenom']); ?>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong>Email:</strong> 
+                                    <span class="editable" data-field-name="email" data-field-type="email">
+                                        <?php echo htmlspecialchars($user['email']); ?>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong>Téléphone:</strong> 
+                                    <span class="editable" data-field-name="telephone" data-field-type="tel">
+                                        <?php echo htmlspecialchars($user['telephone']); ?>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong>Date de naissance:</strong> 
+                                    <span class="editable" data-field-name="date_naissance" data-field-type="date">
+                                        <?php echo htmlspecialchars($user['date_naissance']); ?>
+                                    </span>
+                                </div>
+                                <div>
+                                    <strong>Rôle:</strong> 
+                                    <span class="editable" data-field-name="role" data-field-type="select" data-options="user,admin,vip,banned">
+                                        <?php echo htmlspecialchars($user['role']); ?>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="statut <?php echo $isBanned ? 'banni' : 'actif'; ?>">
+                                <?php echo $isBanned ? 'Banni' : 'Actif'; ?>
+                            </span>
+                        </td>
                         <td><?php echo htmlspecialchars($user['date_inscription']); ?></td>
                         <td>
-
-
-
-
-                            <button class="btn btn-vip">Rendre VIP</button>
-                            <button class="btn btn-bannir">Bannir Utilisateur</button>
+                            <button class="btn btn-vip">
+                                <?php 
+                                    if ($isBanned) {
+                                        echo 'Rendre VIP';
+                                    } else {
+                                        echo $isVip ? 'Retirer VIP' : 'Rendre VIP';
+                                    }
+                                ?>
+                            </button>
+                            <button class="btn btn-bannir">
+                                <?php echo $isBanned ? 'Débannir Utilisateur' : 'Bannir Utilisateur'; ?>
+                            </button>
                         </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
-
-           
-            
 
             <div class="pagination">
                 <?php for($i = 1; $i <= $total_pages; $i++): ?>
@@ -147,6 +182,5 @@ $users_slice = array_slice($users, $start, $users_per_page);
         </div>
     </div>
     <script src="../js/script.js"></script>
-    <script src="../js/admin.js"></script>
 </body>
 </html>
